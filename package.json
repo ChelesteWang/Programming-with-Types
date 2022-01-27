@@ -1,0 +1,27 @@
+{
+  "name": "Programming-with-Types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync":"git add -A && git ci -m 'sync' && git push",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linbudu599/Programming-with-Types.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linbudu599/Programming-with-Types/issues"
+  },
+  "homepage": "https://github.com/linbudu599/Programming-with-Types#readme",
+  "devDependencies": {
+    "vitepress": "^0.21.6"
+  }
+}
