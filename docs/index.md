@@ -292,3 +292,11 @@
   - TS 中的实现
     - 通过一个 extend 函数，将各个类的属性方法依次的复制到新的空白对象上（for...in   hasOwnProperty）
 - OOP 的替代方案
+
+## 章九：泛型数据结构
+
+- 迭代器模式
+  - 将你的数据结构与具体算法解耦再链接起来
+  - 使用 `[Symbol.iterator](): Iterator<T>  {}` 部署迭代器接口，并提供给 for of 访问
+  - 使用 Generator 返回 Iterableterator 
+- 数据流、管道、响应式编程
