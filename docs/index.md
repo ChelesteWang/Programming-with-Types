@@ -300,3 +300,21 @@
   - 使用 `[Symbol.iterator](): Iterator<T>  {}` 部署迭代器接口，并提供给 for of 访问
   - 使用 Generator 返回 Iterableterator 
 - 数据流、管道、响应式编程
+
+
+
+## 章十：泛型算法和迭代器
+
+- 使用迭代器模式实现 map、filter、reduce 的泛型版本
+
+  ```typescript
+  function* map(iter: Iterable<T>, func: (item: T) => U): IterableIterator<T> {
+    for ( const value of iter ){
+      yield func(value)
+    }
+  }
+  ```
+
+- 不同的管道：pipe(op1, op2) op1(op2) op1.op2.op3
+
+- 麻了，这本书不是类型与编程系统吗，为什么有两三章是在讲迭代器？
