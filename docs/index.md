@@ -318,3 +318,20 @@
 - 不同的管道：pipe(op1, op2) op1(op2) op1.op2.op3
 
 - 麻了，这本书不是类型与编程系统吗，为什么有两三章是在讲迭代器？
+
+
+
+## 章十一：高阶类型和其他
+
+- 函子：Box<T> + T -> U = Box<U>，实际上依赖于高阶类型的概念
+- 类型的构造函数：number >>> ()=>[number type], (value:number) => number >>> ()=>[(value:number) => number]
+  - 但对于泛型，其类型构造函数是有实参的：(T)=>[T[] type]
+  - 抽象层
+  - T<U>[ ] >>> ((U) -> [T<U> type] -> [T<U>[ ] type])
+
+- 函数的函子
+- 单子
+  - 管道中的函数错误，返回结果或者错误（Either），此时函子将无法使用（固定的从 A -> B 的映射），如 Either<Err, File> 的 map 需要一个从 File -> string 的函数映射返回一个对应的 Either<Err, File>
+  - bind：对于 Box<T> + T -> U = Box<U> 的函子，在某些场景下函数会直接从 T -> Box<U>，单子 Box<T> + T -> Box<U>，即比函子少了拼装过程？
+  - 列表单子、continuation单子、状态单子、IO单子
+    - 范畴论
